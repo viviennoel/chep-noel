@@ -5,7 +5,9 @@ const usersRoutes = require('./routes/Users.js');
 const Pictures = require('./routes/Pictures.js');
 const Simulator = require('./routes/Simulator.js')
 const path = require('path');
+var cors = require('cors');
 
+app.use(cors());
 
 const app = express();
 mongoose.connect('mongodb+srv://viviennoel:Limousin87*@chep-database.pjx6f.mongodb.net/CHEP-database?retryWrites=true&w=majority',
