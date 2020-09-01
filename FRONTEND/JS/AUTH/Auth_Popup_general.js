@@ -111,7 +111,7 @@ function Signup() {
         document.getElementById('Password_warn').style.display = 'block';
     } else if (document.getElementById('CGU').checked) {
         Clear_Style_Signup_Form();
-        fetch('https://chep-noel.vercel.app/api/auth/signup', { method: "POST", headers: { 'Content-Type': "application/json" }, body: JSON.stringify(user) }).then(response => response.json()).then(response => user_saved_signup(response))
+        fetch('https://chepnoel.vercel.app/api/auth/signup', { method: "POST", headers: { 'Content-Type': "application/json" }, body: JSON.stringify(user) }).then(response => response.json()).then(response => user_saved_signup(response))
             .catch(function (error) {
                 alert('Please try again - ' + error.message)
             })
@@ -176,7 +176,7 @@ function Login() {
         Clear_Style_Login_Form();
         document.getElementById('Password_warn').style.display = 'block';
     } else {
-    fetch('https://chep-noel.vercel.app/api/auth/login', { method: "POST", headers: { 'Content-Type': "application/json" }, body: JSON.stringify(user) }).then(response => response.json()).then(response => user_saved_login(response))
+    fetch('https://chepnoel.vercel.app/api/auth/login', { method: "POST", headers: { 'Content-Type': "application/json" }, body: JSON.stringify(user) }).then(response => response.json()).then(response => user_saved_login(response))
         .catch(function (error) {
             console.log('ERROR: ' + error.message)
         })
